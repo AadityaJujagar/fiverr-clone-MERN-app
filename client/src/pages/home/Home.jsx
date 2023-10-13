@@ -7,8 +7,21 @@ import checkImg from "../../../public/assets/check.png";
 import video from "../../../public/assets/video.mp4";
 import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectCard/ProjectCard";
+import Carousel from "react-multi-carousel";
 
 function Home() {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+  };
+
   return (
     <div className="home">
       {/* featured hero-sec */}
@@ -18,11 +31,11 @@ function Home() {
       <TrustedBy />
 
       {/* slider 1 component */}
-      <Slide slidesToShow={5} arrowsScroll={5}>
+      <Carousel responsive={responsive}>
         {cards.map((card) => (
           <CatCard card={card} key={card.id} />
         ))}
-      </Slide>
+      </Carousel>
       <div className="features">
         <div className="container">
           <div className="item">

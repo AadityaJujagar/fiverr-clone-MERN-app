@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "i": "^0.3.7",
-    "infinite-react-carousel": "^1.2.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-multi-carousel": "^2.8.4",
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {

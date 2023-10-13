@@ -1,13 +1,32 @@
 import "./Gig.scss";
-import { Slider } from "infinite-react-carousel";
 import starIcon from "../../../public/assets/star.png";
 import likeIcon from "../../../public/assets/like.png";
 import dislikeIcon from "../../../public/assets/dislike.png";
 import recycleIcon from "../../../public/assets/recycle.png";
 import clockIcon from "../../../public/assets/clock.png";
 import greenCheckIcon from "../../../public/assets/greencheck.png";
+import Carousel from "react-multi-carousel";
 
 function Gig() {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div className="gig">
       <div className="container">
@@ -32,7 +51,7 @@ function Gig() {
               <span>5</span>
             </div>
           </div>
-          <Slider slidesToShow={1} arrowsScroll={1} className="slider">
+          <Carousel responsive={responsive}>
             <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
@@ -45,7 +64,7 @@ function Gig() {
               src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
             />
-          </Slider>
+          </Carousel>
           <h2>About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This
