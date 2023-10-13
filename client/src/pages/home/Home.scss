@@ -1,0 +1,123 @@
+.home {
+  .features {
+    background-color: #f1fdf7;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+
+    &.dark {
+      background-color: #0d084d;
+
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+    }
+
+    .container {
+      width: 1336px;
+      display: flex;
+      align-items: center;
+      gap: 175px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: rgb(89, 89, 89);
+
+        &:first-child {
+          flex: 1;
+        }
+        &:last-child {
+          flex: 1;
+        }
+        h1 {
+          font-weight: 500;
+          margin-bottom: 10px;
+          color: rgb(79, 79, 79);
+        }
+        .belowHeader {
+          font-size: 35px;
+          letter-spacing: 1px;
+          line-height: 40px;
+          font-weight: 300;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 28px;
+          letter-spacing: 1px;
+        }
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px;
+          font-weight: 500;
+          font-size: 18px;
+          color: gray;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+          .titleText {
+            h2 {
+              font-weight: 500;
+              color: white;
+              font-size: 20px;
+            }
+          }
+        }
+        video {
+          width: 720px;
+          border-radius: 15px;
+          border: 2px solid #ebe9e9;
+        }
+        img {
+          width: 512px;
+        }
+        .header {
+          display: flex;
+          align-items: center;
+
+          h2 {
+            color: white;
+            align-self: center;
+            font-weight: 100;
+          }
+          .logo {
+            font-size: 44px;
+            font-weight: 900;
+            color: white;
+
+            span:last-child {
+              color: #1dbf73;
+            }
+          }
+        }
+        button {
+          background-color: white;
+          color: rgb(89, 89, 89);
+          padding: 20px;
+          width: 30%;
+          align-items: flex-start;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          font-size: 18px;
+          font-weight: 500;
+          transition: all 0.2s ease-in;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

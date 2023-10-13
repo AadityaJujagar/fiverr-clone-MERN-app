@@ -1,0 +1,111 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #013914;
+  color: white;
+  transition: all 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  // scroll effect
+  &.active {
+    background-color: white;
+    color: black;
+  }
+
+  .container {
+    width: 1336px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+
+    .logo {
+      font-size: 36px;
+      font-weight: 900;
+
+      span:last-child {
+        color: #1dbf73;
+      }
+    }
+    .links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      font-weight: 600;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .options {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          border: 1px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: gray;
+          width: 200px;
+          font-weight: 300;
+          z-index: 5;
+        }
+      }
+      button {
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: transparent;
+
+        // scroll effect
+        &.active {
+          color: #1dbf73;
+          border-color: #1dbf73;
+        }
+        //
+        &:hover {
+          background-color: #1dbf73;
+          border-color: #1dbf73;
+          color: white;
+        }
+      }
+    }
+  }
+  .menu {
+    width: 1336px;
+    padding: 10px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: gray;
+
+    span {
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 4px solid #1dbf73;
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    height: 0.1px;
+    background-color: lightgray;
+  }
+}
