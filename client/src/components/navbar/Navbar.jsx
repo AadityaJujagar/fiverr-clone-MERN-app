@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./Navbar.scss";
-import myPic from "../../../public/assets/myPic1.jpeg";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
@@ -49,7 +48,10 @@ function Navbar() {
           )}
           {currentUser && (
             <div className="user" onClick={() => setOpen(!open)}>
-              <img src={myPic} alt="" />
+              <img
+                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">
